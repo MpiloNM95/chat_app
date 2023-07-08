@@ -1,6 +1,7 @@
 # CHAT APP
 ## Introduction
 ## Installation
+### Server Installation
 Create a server folder with the following command in terminal:
 ```
 mkdir server
