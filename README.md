@@ -35,6 +35,19 @@ Now install the different packages that will be used in this server component
 npm i express body-parser bcrypt cors dotenv gridfs-stream multer multer-gridfs-storage helmet morgan jsonwebtoken mongoose
 ```
 ## Usage
+For the server in order to test its running on mongo database
+```
+cd server 
+```
+Because nodemon has already been installed you need to have in package.json file, you have this script command under test:
+```
+"start": "nodemone index.js"
+```
+This means after you have setup the mongoose and .env (envrionmental file) the you can run the following command in your terminal
+```
+npm start
+```
+This should allow the server to run on the Port Number you have configured for the mongo database
 ## Contributing
 ## Related Projects
 ## Licensing
