@@ -8,6 +8,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
+import { register } from "./controllers/auth.js";
 
 /* CONFIGUARATIONS */
 // This will be the middlware which runs inbetween requests are being made
@@ -48,6 +49,11 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({ storage });
+
+/* ROUTES WITH FILES */
+// This is the route that will be used to upload files
+// 
+app.post("/auth/register", upload.single("picture"), register);
 
 /* MONGOOSE SETUP */
 // This is the connection to our database
