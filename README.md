@@ -35,6 +35,7 @@ Now install the different packages that will be used in this server component
 ```
 npm i express body-parser bcrypt cors dotenv gridfs-stream multer multer-gridfs-storage helmet morgan jsonwebtoken mongoose
 ```
+### Client Installation
 ## Usage
 For the server in order to test its running on mongo database
 ```
