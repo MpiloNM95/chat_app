@@ -2,15 +2,23 @@
 ## Introduction
 ## Installation
 Create a server folder with the following command in terminal:
-```mkdir server```
+```
+mkdir server
+```
 Change the directory to the server folder with the following command:
-```cd server```
+```
+cd server
+```
 This will generate a package.json file in the server folder:
 * Dont change anything just press enter
-```npm init -y```
+```
+npm init -y
+```
 Now install nodemone in the server folder with following command:
 * Nodemon ~ Installing nodemone so that the node is running through a live server
-```npm i -g nodemon```
+```
+npm i -g nodemon
+```
 Now install the different packages that will be used in this server component
 * Express ~ for the library
 * Body-parser ~ to process the request body
@@ -23,7 +31,9 @@ Now install the different packages that will be used in this server component
 * Morgan - for login
 * JSONWebToken (JWT) ~ for authentication
 * Mongoose ~ for mongodb access
-```npm i express body-parser bcrypt cors dotenv gridfs-stream multer multer-gridfs-storage helmet morgan jsonwebtoken mongoose```
+```
+npm i express body-parser bcrypt cors dotenv gridfs-stream multer multer-gridfs-storage helmet morgan jsonwebtoken mongoose
+```
 ## Usage
 ## Contributing
 ## Related Projects
