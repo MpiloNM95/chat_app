@@ -16,7 +16,7 @@ export const getUser = async (req, res) => {
     } catch (err) {
         res.status(404).json({ message: err.message });
     }
-}
+};
 
 // export const getUserFriends = async (req, res) => { means that we are exporting the getUserFriends function and we are using the async function to get the user friends
 // try { means that we are using the try catch block to get the user friends
