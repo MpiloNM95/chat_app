@@ -8,6 +8,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
+import authRoutes from "./routes/auth.js";
 import { register } from "./controllers/auth.js";
 
 /* CONFIGUARATIONS */
@@ -40,6 +41,12 @@ app.use("/assets", express.static(path.join(__dirname, 'public/assets')));
 
 /* FILE STORAGE */
 // This is the storage engine that will be used to store our files
+// const storage = multer.diskStorage({ means that we are using the disk storage engine
+// destination: function (req, file, cb) { means that we are using the disk storage engine
+// cb(null, "public/assets"); means that we are using the disk storage engine
+// filename: function (req, file, cb) { means that we are using the disk storage engine
+// cb(null, file.originalname); means that we are using the disk storage engine
+// const upload = multer({ storage }); means that we are using the disk storage engine
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, "public/assets");
@@ -52,11 +59,22 @@ const upload = multer({ storage });
 
 /* ROUTES WITH FILES */
 // This is the route that will be used to upload files
-// 
+// app.post("/auth/register", upload.single("picture"), register); This is the route that will be used to upload files
 app.post("/auth/register", upload.single("picture"), register);
+
+/* ROUTES */
+// This is the route that will be used to register a user
+app.use("/auth", authRoutes);
 
 /* MONGOOSE SETUP */
 // This is the connection to our database
+// const PORT = process.env.PORT || 6001; means that we are using the current file name as the path specifically when use modules
+// mongoose.connect(process.env.MONGO_URL, { means that we are using the current file name as the path specifically when use modules
+// useNewUrlParser: true, means that we are using the current file name as the path specifically when use modules
+// useUnifiedTopology: true, means that we are using the current file name as the path specifically when use modules
+// }).then(() => { means that we are using the current file name as the path specifically when use modules
+// app.listen(PORT, () => console.log(`Server Port: ${PORT}`)); means that we are using the current file name as the path specifically when use modules
+// }).catch((error) => console.log(`${error} did not connect`)); means that we are using the current file name as the path specifically when use modules
 const PORT = process.env.PORT || 6001;
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
