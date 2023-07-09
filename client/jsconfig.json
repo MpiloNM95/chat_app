@@ -1,0 +1,9 @@
+// This means that all the files in the src folder will be included in the project.
+// This is needed for the absolute imports to work.
+// Thus making my life easier.
+{
+    "compilerOptions": {
+        "baseUrl": "src"
+    },
+    "include": ["src"]
+}
