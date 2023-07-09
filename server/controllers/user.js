@@ -1,4 +1,4 @@
-import User from '../models/User';
+import User from '../models/User.js';
 
 /* READ */
 // export const getUser = async (req, res) => { means that we are exporting the getUser function and we are using the async function to get the user
@@ -40,7 +40,6 @@ export const getUserFriends = async (req, res) => {
             }
         );
         res.status(200).json(formattedFriends);
-
     } catch (err) {
         res.status(404).json({ message: err.message }); 
     }
