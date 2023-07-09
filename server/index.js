@@ -9,6 +9,8 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth.js";
+import userRoutes from "./routes/user.js";
+import postRoutes from "./routes/post.js";
 import { register } from "./controllers/auth.js";
 
 /* CONFIGUARATIONS */
@@ -65,6 +67,8 @@ app.post("/auth/register", upload.single("picture"), register);
 /* ROUTES */
 // This is the route that will be used to register a user
 app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
+app.use("/posts", postRoutes);
 
 /* MONGOOSE SETUP */
 // This is the connection to our database
