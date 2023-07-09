@@ -50,7 +50,20 @@ Now that you have done that its now time to create the client folder with the fo
 ```
 npx create-react-app client
 ```
-This will then create a react application inside the client folder
+This will then create a react application inside the client folder change the directory to client so you can install the following packages for the client component
+* React-redux ~ this being the most popular enterprize state level management tool
+* @Redux/toolkit ~ makes very easy to use redux, its a wrapper around redux which make very simple and easy to redux main state library that we are going to use
+* Redux-persist ~ so I can selectively store state into local if I need to. Also If I want to the user and token information to local stae so when the user closes the tab and they comeback the user information is still there in the browser
+* React-dropzone ~ this will handle the file uploading and file handling on the frontend so we can send to the backend
+* Dotenv ~ for the environmental variables
+* Formik ~ for the form handling
+* Yup ~ for the validation
+* React-router-dom@6 ~ for handling all the different react routes and pages 
+* @MUI/Material ~ for the all the material ui packages which include the following:
+```@emotion/react, @emotion/styled, @mui/icons-material```
+```
+npm i react-redux @reduxjs/toolkit redux-persist react-dropzone dotenv formik yup react-router-dom@6 @mui/material @emotion/react @emotion/styled @mui/icons-material
+```
 ## Usage
 ### Server Usage (backend)
 For the server in order to test its running on mongo database
