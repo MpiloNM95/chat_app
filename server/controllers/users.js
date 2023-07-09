@@ -1,4 +1,4 @@
-import User from '../models/User.js';
+import User from "../models/User.js";
 
 /* READ */
 // export const getUser = async (req, res) => { means that we are exporting the getUser function and we are using the async function to get the user

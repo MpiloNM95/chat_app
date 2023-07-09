@@ -12,6 +12,7 @@ import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/user.js";
 import postRoutes from "./routes/post.js";
 import { register } from "./controllers/auth.js";
+import { verifyToken } from "./middleware/auth.js";
 
 /* CONFIGUARATIONS */
 // This will be the middlware which runs inbetween requests are being made
@@ -63,6 +64,7 @@ const upload = multer({ storage });
 // This is the route that will be used to upload files
 // app.post("/auth/register", upload.single("picture"), register); This is the route that will be used to upload files
 app.post("/auth/register", upload.single("picture"), register);
+app.post("/posts", verifyToken, upload.single("picture"), createPost)
 
 /* ROUTES */
 // This is the route that will be used to register a user
