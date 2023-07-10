@@ -1,5 +1,6 @@
 # CHAT APP
 ## Introduction
+This the chat app this is designed and developed and built for friends who are look for a place to conect just like twitter and instagram.
 ## Installation
 ### Server Installation
 Create a server folder with the following command in terminal:
